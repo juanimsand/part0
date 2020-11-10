@@ -1,0 +1,24 @@
+
+user->browser: Add a new note and click on 'Save' button
+
+note over browser:
+browser receive the event and handle it
+also put this new note in the notes array
+end note
+
+browser->browser: The browser rerenders the page
+
+
+note over browser:
+browser send a JSON with the note and date as a new note
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+
+note over server:
+server add this new note into notes array
+end note
+
+server-->browser: Send status code
+
